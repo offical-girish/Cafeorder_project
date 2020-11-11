@@ -1,0 +1,175 @@
+/*• customer module
+1. customer registration
+2. customer login
+3. food item details
+4. cart 
+5. customer shipping
+6. customer order
+7. customer order confirmation
+8. change password
+• product module
+1. product stock module
+2. order module 
+3. item module
+*/
+
+
+#include<iostream>
+#include<conio.h>
+#include<string>
+#include<stdio.h>
+#include<process.h>
+#include<iomanip>
+
+
+using namespace std;
+int main()
+ {
+  system("cls");
+  
+  unsigned int sum,add;
+  
+  unsigned int bs=40,ms=40,ffs=60,kks=60,os=60;
+  unsigned int tea=10,cof=20,gt=20;
+  unsigned int bis=15,lay=20;
+  unsigned int par=110,cor=90,twr=1199, lur=17,tir=107;    
+  unsigned int sb=0,sm=0,sk=0,so=0,bt=0,bc=0,bg=0,sbis=0,slay=0;
+  char name[50],pu,c[10];
+  int bill=0,d;
+getch();
+system("cls");
+      main:;
+	  cout<<"\n\n\n\t\t\tCAFE";
+      cout<<"\n\n\nPLZ ENTER CUSTOMER INFO";
+      cout<<"\n\n\n\n NAME:";
+      gets(name);
+      cout<<"\n PHONE NO.:";
+      cin>>c;
+
+      again:;
+      system("cls");
+      cout<<"\n\n\n\n\1.MENU & PURCHASE";
+//      cout<<"\n\n\n\2.NEW CUSTOMER";
+//      cout<<"\n\n\n\3.QUANTITY AVAILABLE";
+      cout<<"\n\n\n\4.EXIT";
+      cout<<"\n\n\nENTER YOUR CHOICE:";
+      cin>>d;
+      system("cls");
+  switch(d)
+  {
+     case 1:
+      cout<<"\nITEMS\t\t\t\t\t\t\tRATE(RS)";
+      cout<<"\n--------------------------------------------------";
+      cout<<"\n\n\tShakes:";
+      cout<<"\n\n\nBanana Shake\t\t\t\t\t\t\t40";
+      cout<<"\n\nMango Shake\t\t\t\t\t\t\t40";
+      cout<<"\n\nKit-Kat Shake\t\t\t\t\t\t\t60   ";
+      cout<<"\n\nOrea Shake\t\t\t\t\t\t\t60  ";
+      cout<<"\n\n\tBeverages:";
+      cout<<"\n\nTea\t\t\t\t\t\t\t\t10   ";
+      cout<<"\n\nCoffee\t\t\t\t\t\t\t\t20  ";
+      cout<<"\n\nGreen Tea\t\t\t\t\t\t\t20   ";
+      cout<<"\n\n\tSnacks\t\t\t\t\t\t\t";
+      cout<<"\n\nBiscute\t\t\t\t\t\t\t\t15   ";
+      cout<<"\n\nLays\t\t\t\t\t\t\t\t20   ";
+      start:
+      cout<<"\n\n\nDO YOU WANT TO PURCHASE(Y/N):\n";
+      cin>>pu;
+ if(pu=='Y'||pu=='y')
+ {switch(pu)
+  case 1:
+   system("cls");
+   cout<<"\n\n\n\t\t\t\tPURCHASE LIST";
+   cout<<"\n\n\tShakes:";
+   cout<<"\nBanana Shake(Rs 40): ";
+   cin>>sb;
+   
+   cout<<"\nMango Shake(Rs 40):";
+cin>>sm;
+   
+   cout<<"\nKit-Kat Shake(Rs 60): ";
+   cin>>sk;
+   
+   cout<<"\nOrea Shake(Rs 60): ";
+   cin>>so;
+   
+   cout<<"\n\n\tBeverages:";
+   cout<<"\nTea(Rs 10): ";
+   cin>>bt;
+   
+   cout<<"\nCoffee(Rs 20): ";
+   cin>>bc;
+  
+   cout<<"\nGreen Tea(Rs 20): ";
+   cin>>bg;
+
+   cout<<"\n\n\tSnacks";
+   cout<<"\nBiscute(Rs 15): ";
+   cin>>sbis;
+   
+   cout<<"\nLays(Rs 20): ";
+   cin>>slay;
+   
+   cout<<"\n";
+   system("cls");
+   cout<<"\n\n\n\n\n\n\t\t\t\t  CAFE\n";
+   cout<<"\n\n\t\t\t\t  CASH MEMO\n";
+   cout<<"\n\nBILL NO.:"<<bill;
+   cout<<"\n\nNAME:"<<name;
+   cout<<"\n\nPHONE NO.:"<<c;
+   cout<<"\n\n\n\n\n";
+
+cout<<"\nITEMS"<<setw(40)<<"QUANTITY"<<setw(35)<<"PRICE(Rs.)";
+
+   
+if(sb>0)
+cout<<"\n\nBanana Shake"<<setw(33)<<sb<<setw(30)<<"Rs."<<sb*bs;
+if(sm>0)
+cout<<"\n\nMango Shake"<<setw(40)<<sm<<setw(28)<<"Rs."<<sm*ms;
+if(sk>0)
+cout<<"\n\nKit-Kat Shake"<<setw(40)<<sk<<setw(28)<<"Rs."<<sk*kks;
+if(so>0)
+cout<<"\n\nOrea Shake"<<setw(40)<<so<<setw(28)<<"Rs."<<so*os;
+if(bt>0)
+cout<<"\n\nTea"<<setw(40)<<bt<<setw(28)<<"Rs."<<bt*tea;
+if(bc>0)
+cout<<"\n\nCoffee" <<setw(40)<<bc<<setw(28)<<"Rs."<<bc*cof;
+if(bg>0)
+cout<<"\n\nGreen Tea"<<setw(40)<<bg<<setw(28)<<"Rs."<<bg*gt;
+if(sbis>0)
+cout<<"\n\nBiscute"<<setw(40)<<sbis<<setw(28)<<"Rs."<<sbis*bis;
+if(slay>0)
+cout<<"\n\nLays"<<setw(40)<<slay<<setw(28)<<"Rs."<<slay*lay;
+
+  
+  sum=((sb*bs)+(sm*ms)+(sk*kks)+(so*os)+(bt*tea)+(bc*cof)+(bg*gt)+(sbis*bis)+(slay*lay));
+  add=sb+sm+sk+so+bt+bc+bg+sbis+slay;
+
+ cout<<"\n\n\nTOTAL:"<<setw(37)<<add<<setw(28)<<"Rs."<<sum;
+  cout<<"\n\nTHANK YOU FOR SHOPPING FORM US\t\tVISIT US AGAIN\n";
+ 
+ getch();
+
+ cout<<"THIRSTY!! WANT TO SHOP AGAIN (Y/N)\t";
+ if(pu=='Y'||pu=='y')
+ goto again;
+ else 
+ break;
+ 
+ }
+ else
+ {goto again;
+
+ }
+ case 4:
+ cout<<"\n\n\n\n\n\n\n\n\n\t\t\t\tTHANKS THANK YOU HAVE A NICE DAY";
+ getch();
+ exit(0);
+ 
+ default:
+ cout<<"Your choice is wrong";
+ getch();
+ goto again;
+  }
+return 0;
+ } 
